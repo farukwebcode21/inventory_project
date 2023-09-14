@@ -18,4 +18,7 @@ Route::get( '/', function () {
     return view( 'welcome' );
 } );
 
-Route::post( '/user-register', [UserController::class, 'UserRegistration'] );
+Route::post( '/user-register', [UserController::class, 'user_registration'] );
+Route::post( '/user-login', [UserController::class, 'user_login'] );
+Route::post( '/send-otp', [UserController::class, 'send_otpcode'] );
+Route::post( '/verify-otp', [UserController::class, 'verify_otp'] );
